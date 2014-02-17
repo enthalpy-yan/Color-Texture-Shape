@@ -6,4 +6,5 @@ This repo implements the algorithms to extract the color, texture, and shape fea
 ##Dependecies
 
 [OpenCV-Python](http://docs.opencv.org/trunk/doc/py_tutorials/py_setup/py_table_of_contents_setup/py_table_of_contents_setup.html#py-table-of-content-setup)
-[http://www.numpy.org/](http://www.numpy.org/)
+
+[Numpy](http://www.numpy.org/)
