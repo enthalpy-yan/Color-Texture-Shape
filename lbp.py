@@ -25,7 +25,7 @@ def getNeighborhood(img, idx, idy, default=0):
 #
 # Compute LBP feature vector
 #
-def basic_lbp(img):
+def lbp(img):
     height, width = img.shape
     ret = np.empty([height, width], np.uint8)
     for x in range(0, len(img)):
@@ -54,7 +54,7 @@ def basic_lbp(img):
 # Test case
 #
 img = cv2.imread('lena.jpg', 0)
-transformed_img = basic_lbp(img)
+transformed_img = lbp(img)
 
 cv2.imshow('image', img)
 cv2.imshow('thresholded image', transformed_img)
