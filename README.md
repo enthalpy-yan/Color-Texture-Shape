@@ -1,7 +1,7 @@
 Color-Texture-Shape
 ===================
 
-This repo implements the algorithms to extract the color, texture, and shape features including color histogram, color  correlogram, local binary pattern histogram, and histogram of oriented gradient.
+This repo implements the algorithms to extract the color, texture, and shape features including color histogram, color  correlogram, local binary pattern histogram, and histogram of oriented gradient. It also implements four different distance functions include L1, L2, Chi-Square, and the KL-distances, and two similarity functions include Cosine similarity and histogram intersection.
 
 ##Dependecies:
 
