@@ -1,6 +1,7 @@
 import numpy as np
 import cv2
 import DistanceMeasures as dm
+import SimilarityMeasures as sm
 
 #
 # Compare the center pixel to its 8 neighbors
@@ -56,6 +57,8 @@ def lbp(img):
 #
 img = cv2.imread('lena.jpg', 0)
 transformed_img = lbp(img)
+
+print sm.HistogramIntersection(img, img)
 
 #cv2.imshow('image', img)
 #cv2.imshow('thresholded image', transformed_img)
