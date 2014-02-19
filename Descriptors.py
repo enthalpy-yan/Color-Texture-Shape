@@ -57,10 +57,8 @@ def lbp(img):
 img = cv2.imread('lena.jpg', 0)
 transformed_img = lbp(img)
 
-print dm.L2Dist(img, img)
+#cv2.imshow('image', img)
+#cv2.imshow('thresholded image', transformed_img)
 
-cv2.imshow('image', img)
-cv2.imshow('thresholded image', transformed_img)
-
-cv2.waitKey(0)
-cv2.destroyAllWindows()
+#cv2.waitKey(0)
+#cv2.destroyAllWindows()
