@@ -58,8 +58,6 @@ def lbp(img):
 img = cv2.imread('lena.jpg', 0)
 transformed_img = lbp(img)
 
-print sm.HistogramIntersection(img, img)
-
 #cv2.imshow('image', img)
 #cv2.imshow('thresholded image', transformed_img)
 
