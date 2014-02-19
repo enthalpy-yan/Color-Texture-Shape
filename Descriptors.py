@@ -1,5 +1,6 @@
 import numpy as np
 import cv2
+import DistanceMeasures as dm
 
 #
 # Compare the center pixel to its 8 neighbors
@@ -55,6 +56,8 @@ def basic_lbp(img):
 #
 img = cv2.imread('lena.jpg', 0)
 transformed_img = basic_lbp(img)
+
+print dm.L2Dist(img, img)
 
 cv2.imshow('image', img)
 cv2.imshow('thresholded image', transformed_img)
