@@ -9,4 +9,6 @@ This repo implements the algorithms to extract the color, texture, and shape fea
 
 [Numpy](http://www.numpy.org/)
 
-[Flask](http://flask.pocoo.org/) (For our web server in the final project)
+[Flask](http://flask.pocoo.org/) (back-end server in the final project)
+
+[Polymer](http://www.polymer-project.org/) (front-end in the final project)
