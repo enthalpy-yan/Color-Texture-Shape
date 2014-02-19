@@ -8,3 +8,5 @@ This repo implements the algorithms to extract the color, texture, and shape fea
 [OpenCV-Python](http://docs.opencv.org/trunk/doc/py_tutorials/py_setup/py_table_of_contents_setup/py_table_of_contents_setup.html#py-table-of-content-setup)
 
 [Numpy](http://www.numpy.org/)
+
+[Flask](http://flask.pocoo.org/) (For our web server in the final project)
