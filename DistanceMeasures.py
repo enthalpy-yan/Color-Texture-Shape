@@ -4,7 +4,7 @@ import numpy as np
 # L1 Distance
 #
 def L1Dist(i1, i2):
-    return np.sum(np.abs(img1 - img2))
+    return np.sum(np.abs(i1 - i2))
 
 #
 # L2 Distance
