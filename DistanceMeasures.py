@@ -16,7 +16,7 @@ def L2Dist(i1, i2):
 # Chi-Square Distance
 #
 def ChiSquareDist(i1, i2):
-    return np.sum(2 * ((i1 - i2) ** 2) / (i1 + i2))
+    return np.sum(np.where(i1 > 0, ((i1 - i2) ** 2) / i1, 0))
 
 #
 # KL Distance
