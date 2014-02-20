@@ -72,10 +72,10 @@ def correlogram(photo, Cm, K):
                             # print "same color"
         print countColor
         for i in range(len(color)):
-            color[i] = float( color[i] / countColor )
+            color[i] = float(color[i]) / countColor
         
         colors_percent.append(color)
- 
+
     return colors_percent
 
 img = cv2.imread('1.jpg', 1)
