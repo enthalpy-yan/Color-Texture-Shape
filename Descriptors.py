@@ -52,6 +52,12 @@ def lbp(img):
             ret.itemset((x,y), res)
     return ret
 
+# resize the img to given width and height
+def Resize(src,width,height):
+    new = cv2.resize(src,(width,height))
+    return new
+
+
 #
 # Test case
 #
