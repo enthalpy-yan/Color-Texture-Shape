@@ -1,3 +1,12 @@
+"""
+autoCorrelogram(imgFile)
+Please input the source path of image as the parameter imgFile.
+
+To improve the performance, we consider to utilize color quantization to reduce image into 64 colors. So the K value
+of k-means should be 64.
+
+"""
+
 import cv2
 import sys
 import numpy as np
