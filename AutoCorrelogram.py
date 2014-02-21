@@ -73,6 +73,9 @@ def correlogram(photo, Cm, K):
 
     return colorsPercent
 
+#
+#   imgFile: the source path of image
+#
 def autoCorrelogram(imgFile):
     img = cv2.imread(imgFile, 1)
 
@@ -98,5 +101,3 @@ def autoCorrelogram(imgFile):
 
     result = correlogram(res2, colors64, K)
     return result
-
-a = autoCorrelogram('lena.jpg')
