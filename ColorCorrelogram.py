@@ -2,13 +2,12 @@ import cv2
 import sys
 import numpy as np
 
-
 def unique(a):
     order = np.lexsort(a.T)
     a = a[order]
     diff = np.diff(a, axis=0)
     ui = np.ones(len(a), 'bool')
-    ui[1:] = (diff != 0).any(axis=1) 
+    ui[1:] = (diff != 0).any(axis=1)
     return a[ui]
 
 # check if point is a valid pixel
@@ -78,27 +77,28 @@ def correlogram(photo, Cm, K):
 
     return colors_percent
 
-img = cv2.imread('1.jpg', 1)
+def autoCorrelogram(imgFile):
+    img = cv2.imread(imgFile, 1)
 
-Z = img.reshape((-1,3))
+    Z = img.reshape((-1,3))
 
-# convert to np.float32
-Z = np.float32(Z)
+    # convert to np.float32
+    Z = np.float32(Z)
 
-# define criteria, number of clusters(K) and apply kmeans()
-criteria = (cv2.TERM_CRITERIA_EPS + cv2.TERM_CRITERIA_MAX_ITER, 10, 1.0)
-K = 64
-ret,label,center = cv2.kmeans(Z, K, criteria, 10, cv2.KMEANS_RANDOM_CENTERS)
+    # define criteria, number of clusters(K) and apply kmeans()
+    criteria = (cv2.TERM_CRITERIA_EPS + cv2.TERM_CRITERIA_MAX_ITER, 10, 1.0)
+    K = 64
+    ret, label, center = cv2.kmeans(Z, K, criteria, 10, cv2.KMEANS_RANDOM_CENTERS)
 
-# Now convert back into uint8, and make original image
-center = np.uint8(center)
-res = center[label.flatten()]
-res2 = res.reshape((img.shape))
+    # Now convert back into uint8, and make original image
+    center = np.uint8(center)
+    res = center[label.flatten()]
+    res2 = res.reshape((img.shape))
 
-# according to "Image Indexing Using Color Correlograms" paper
-K = [i for i in range(1, 9, 2)]
+    # according to "Image Indexing Using Color Correlograms" paper
+    K = [i for i in range(1, 9, 2)]
 
-colors64 = unique(np.array(res))
+    colors64 = unique(np.array(res))
 
-result = correlogram(res2, colors64, K)
-print result
+    result = correlogram(res2, colors64, K)
+    return result
