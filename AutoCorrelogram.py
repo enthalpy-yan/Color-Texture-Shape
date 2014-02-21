@@ -101,5 +101,3 @@ def autoCorrelogram(imgFile):
 
     result = correlogram(res2, colors64, K)
     return result
-
-a = autoCorrelogram('lena.jpg')
