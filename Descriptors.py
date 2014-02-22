@@ -32,6 +32,9 @@ def getNeighborhood(img, idx, idy, default=0):
 
 
 def unique(a):
+    """
+    remove duplicates from input list
+    """
     order = np.lexsort(a.T)
     a = a[order]
     diff = np.diff(a, axis = 0)
@@ -51,7 +54,7 @@ def isValid(X, Y, point):
  
 def getNeighbors(X, Y, x, y, dist):
     """
-    Find pixel neighbors
+    Find pixel neighbors according to various distances
     """
     cn1 = (x + dist, y + dist)
     cn2 = (x + dist, y)
@@ -73,7 +76,7 @@ def getNeighbors(X, Y, x, y, dist):
  
 def correlogram(photo, Cm, K):
     """
-    Get correlogram
+    Get auto correlogram
     """
     X, Y, t = photo.shape
  
@@ -127,7 +130,7 @@ def autoCorrelogram(imgFile):
     So the K value of k-means should be 64.
 
     imgFile:
-     The numpy ndarray that describe an image.
+     source path of image. NOTE: shouldn't be the numpy ndarray.
     """
     img = cv2.imread(imgFile, 1)
 
