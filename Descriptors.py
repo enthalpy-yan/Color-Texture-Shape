@@ -195,13 +195,13 @@ def HoG(img, cell_per_blk=(3, 3), pix_per_cell=(8, 8), orientation=3):
     the following as keyword arguments:
     
     cell_per_blk:
-     Describe here....
+     How may cells in a block ( cells in height, cells in width)
 
     pix_per_cell:
-     Describe here....
+     The size of each cell: ( height, witdh )
 
-    orientation
-     Describe here....
+    orientation:
+     Binning the gradient into how many orientation bins
     """
     if img is None:
         print " pic read failed"
