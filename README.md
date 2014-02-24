@@ -16,7 +16,7 @@ This repo is the Course Project 1 for CS598 Visual Information Retrieval in Stev
 ##File Structure:
 ```
 Project1/
-  |-modules
+  |-modules/
   |--colorHistogram/          (Directory for source code that implements color histogram calculation)
   |-Descriptors.py            (Image descriptor functions)
   |-DistanceMeasures.py       (Distance Measurement functions)
