@@ -17,10 +17,10 @@ This repo is the Course Project 1 for CS598 Visual Information Retrieval in Stev
 ```
 root/
   |-lib/                      (Directory for holding library files)
+  |--Descriptors.py            (Image descriptor functions)
+  |--DistanceMeasures.py       (Distance Measurement functions)
+  |--SimilarityMeasures.py     (Similarity Measurement functions)
   |-modules/                  (Directory for holding modules implemented using c++)
   |--colorHistogram/          (Source code that implements color histogram calculation)
-  |-Descriptors.py            (Image descriptor functions)
-  |-DistanceMeasures.py       (Distance Measurement functions)
-  |-SimilarityMeasures.py     (Similarity Measurement functions)
   |-Main.py                   (Runnable file for testing our APIs)
 ```
