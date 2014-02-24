@@ -13,7 +13,9 @@ if __name__ == "__main__":
     
     print "Testing Color Correlogram"
     matrix = des.autoCorrelogram(img4AutoCorr)
-    print matrix
+    for i in range(0, 4): 
+        print "k = ", 2 * i + 1
+        print matrix[i]
     
     print "Testing LBP"
     transformed_img = des.lbp(img1)
