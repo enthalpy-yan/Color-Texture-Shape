@@ -22,4 +22,4 @@ def KLDist(i1, i2):
     """
     KL Distance
     """
-    return np.sum(np.where(i1 != 0, i1 * np.log(i1 / i2), 0))
+    return np.sum(np.where(i2 != 0, i1 * np.log(i1 / i2), 0))
