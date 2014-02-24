@@ -189,7 +189,7 @@ def lbp(img):
     return ret
 
 
-def HoG(img, cell_per_blk=(3, 3), pix_per_cell=(8, 8), orientation=3):
+def HoG(img, See_graph=False, cell_per_blk=(3, 3), pix_per_cell=(8, 8), orientation=3):
     """
     The function for computing Histogram of oriented gradients. Takes 
     the following as keyword arguments:
@@ -231,6 +231,25 @@ def HoG(img, cell_per_blk=(3, 3), pix_per_cell=(8, 8), orientation=3):
         temp1 = np.where(ori >= 180 / orientation * i, temp1, 0)
         temp2 = np.where(temp1>0, magnitude, 0)
         ori_histogram[:,:,i] = uniform_filter(temp2, size = (cy, cx))[cy / 2 :: cy, cx / 2 :: cx]
+
+    # display output if required
+    if See_graph is True:
+        from skimage import draw
+        hog_image = np.zeros(img.shape, dtype=float)
+        radius = min(cx, cy) // 2 - 1
+        print "Drawing HOG output..."
+        for x in range(ncell_x):
+            for y in range(ncell_y):
+                for o in range(orientation):
+                    centre = tuple([y * cy + cy // 2, x * cx + cx // 2])
+                    dx = radius * cos(float(o) / orientation * np.pi)
+                    dy = radius * sin(float(o) / orientation * np.pi)
+                    rr, cc = draw.line(int(centre[0] - dx), int(centre[1] - dy), int(centre[0] + dx), int(centre[1] + dy))
+                    hog_image[rr, cc] += ori_histogram[y, x, o]
+
+        cv2.imshow('HoG img',hog_image)
+        cv2.waitKey(15)
+
 
     # normalization
     n_blocksx = (ncell_x - bx) + 1
