@@ -32,6 +32,7 @@ if __name__ == "__main__":
     print "Chi-square distance is " + str(dm.ChiSquareDist(img1, img2))
     print "KL distance is " + str(dm.KLDist(img1, img2))
 
+    print "Testing similarity functions"
     img3 = cv2.imread('bunny.jpg', 0)
     img3 = des.Resize(img3,img1.shape[0],img1.shape[1])
     print "Histogram Intersection similarity of the same img is ", float(sm.hist_intersection(img1, img2))
