@@ -19,5 +19,5 @@ Project1/
   |-Descriptors.py            (Image descriptor functions)
   |-DistanceMeasures.py       (Distance Measurement functions)
   |-SimilarityMeasures.py     (Similarity Measurement functions)
-  |-Main.py                   (runnable file for testing our APIs)
+  |-Main.py                   (Runnable file for testing our APIs)
 ```
