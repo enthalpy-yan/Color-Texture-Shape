@@ -12,3 +12,10 @@ This repo is the Course Project 1 for CS598 Visual Information Retrieval in Stev
 [Flask](http://flask.pocoo.org/) (back-end server in the final project)
 
 [Polymer](http://www.polymer-project.org/) (front-end in the final project)
+
+##File Structure:
+Project1/
+  |-Descriptors.py            (Image descriptor functions)
+  |-DistanceMeasures.py       (Distance Measurement functions)
+  |-SimilarityMeasures.py     (Similarity Measurement functions)
+  |-Main.py                   (runnable file for testing our APIs)
