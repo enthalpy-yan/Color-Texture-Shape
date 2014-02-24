@@ -9,6 +9,8 @@ This repo is the Course Project 1 for CS598 Visual Information Retrieval in Stev
 
 [Scipy Library](http://www.scipy.org/scipylib/index.html)
 
+[Numpy] (http://www.numpy.org)
+
 ##File Structure:
 ```
 root/
@@ -20,3 +22,7 @@ root/
   |--colorHistogram/          (Source code that implements color histogram calculation)
   |-Main.py                   (Runnable file for testing our APIs)
 ```
+## How to run the code:
+1. Install dependecies (OpenCV-Python, Scipy, Numpy)
+2. Open a command line tool
+3. python Main.py
