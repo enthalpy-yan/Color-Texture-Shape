@@ -122,18 +122,16 @@ def Resize(src,width,height):
 # Image Descriptor functions
 #
 
-def autoCorrelogram(imgFile):
+def autoCorrelogram(img):
     """
     The functions for computing color correlogram. 
     To improve the performance, we consider to utilize 
     color quantization to reduce image into 64 colors. 
     So the K value of k-means should be 64.
 
-    imgFile:
-     source path of image. NOTE: shouldn't be the numpy ndarray.
+    img:
+     The numpy ndarray that describe an image in 3 channels.
     """
-    img = cv2.imread(imgFile, 1)
-
     Z = img.reshape((-1, 3))
 
     # convert to np.float32
