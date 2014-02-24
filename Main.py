@@ -9,7 +9,12 @@ if __name__ == "__main__":
     print "Test start..."
     img1 = cv2.imread('lena.jpg', 0)
     img2 = cv2.imread('lena.jpg', 0)
-
+    img4AutoCorr = cv2.imread('lena.jpg', 1)
+    
+    print "Testing Color Correlogram"
+    matrix = des.autoCorrelogram(img4AutoCorr)
+    print matrix
+    
     print "Testing LBP"
     transformed_img = des.lbp(img1)
     cv2.imshow('image', img1)
