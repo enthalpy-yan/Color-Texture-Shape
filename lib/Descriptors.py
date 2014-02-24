@@ -1,7 +1,7 @@
 import numpy as np
 import cv2
 import sys
-from scipy import sqrt, pi, arctan2
+from scipy import sqrt, pi, arctan2, cos, sin
 from scipy.ndimage import uniform_filter
 
 
@@ -189,7 +189,7 @@ def lbp(img):
     return ret
 
 
-def HoG(img, See_graph=False, cell_per_blk=(3, 3), pix_per_cell=(8, 8), orientation=3):
+def HoG(img, See_graph=False, cell_per_blk=(3, 3), pix_per_cell=(5, 5), orientation=9):
     """
     The function for computing Histogram of oriented gradients. Takes 
     the following as keyword arguments:
@@ -248,7 +248,8 @@ def HoG(img, See_graph=False, cell_per_blk=(3, 3), pix_per_cell=(8, 8), orientat
                     hog_image[rr, cc] += ori_histogram[y, x, o]
 
         cv2.imshow('HoG img',hog_image)
-        cv2.waitKey(15)
+        cv2.waitKey(0)
+        cv2.destroyAllWindows()
 
 
     # normalization

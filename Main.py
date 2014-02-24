@@ -14,7 +14,7 @@ if __name__ == "__main__":
     transformed_img = des.lbp(img1)
     cv2.imshow('image', img1)
     cv2.imshow('thresholded image', transformed_img)
-    cv2.waitKey(0)
+    cv2.waitKey(50)
     cv2.destroyAllWindows()
 
     print "Testing distance calculation functions"
@@ -22,3 +22,7 @@ if __name__ == "__main__":
     print "L2 distance is " + str(dm.L2Dist(img1, img2))
     print "Chi-square distance is " + str(dm.ChiSquareDist(img1, img2))
     print "KL distance is " + str(dm.KLDist(img1, img2))
+
+    print "Testing HOG"
+    hog = des.HoG(img1,See_graph=True)
+    print hog
