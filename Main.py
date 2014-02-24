@@ -24,6 +24,7 @@ if __name__ == "__main__":
 
     print "Testing HOG"
     hog = des.HoG(img1,See_graph=True)
+    print "The output Matrix of HOG: "
     print hog
 
     print "Testing distance calculation functions"
